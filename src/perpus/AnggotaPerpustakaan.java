@@ -155,7 +155,7 @@ public class AnggotaPerpustakaan {
     }
 
     public void setTotalPinjaman(int totalPinjaman) {
-        return totalPinjaman;
+
     }
 
     public String toString() {

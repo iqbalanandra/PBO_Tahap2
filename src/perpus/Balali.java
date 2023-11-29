@@ -29,6 +29,8 @@ public class Balali {
         
         while (true) {
             System.out.println("=========================================================================");
+            System.out.println("       ~~~~~~~~~~~~   WELCOME TO BALAM LIBRARY   ~~~~~~~~~~~~           ");
+            System.out.println("=========================================================================");
             int index = 1;
             System.out.println("Pilih Akses Sebagai");
             System.out.println("1. Admin\n2. Anggota\n0. Keluar");
@@ -44,11 +46,11 @@ public class Balali {
                 while(true){
                     System.out.println("=========================================================================\n");
                     System.out.println("Pilih operasi:");
-                    System.out.println("1. Tambah Anggota");
+                    System.out.println("1. Mendaftar Anggota");
                     System.out.println("2. Hapus Anggota");
                     System.out.println("3. Tambah Buku");
                     System.out.println("4. Hapus Buku");
-                    System.out.println("5. Tampilkan Anggota");
+                    System.out.println("5. List Anggota");
                     System.out.println("6. Aktivitas");
                     System.out.println("0. Kembali");
                     System.out.print("Operasi : ");
@@ -92,7 +94,7 @@ public class Balali {
                                 System.out.println("\nBerhasil Menambahkan Buku Balali..");
                                 break;
                             case 4:
-                                System.out.print("Masukkan Judul Buku Yang Anakn Dihapus : ");
+                                System.out.print("Masukkan Judul Buku Yang Akan Dihapus : ");
                                 String judulBuku = scanner.nextLine();
                                 adminn.removeBuku(judulBuku);
                                 System.out.println("Berhasil Menghapus " + judulBuku + "\n");
@@ -108,7 +110,7 @@ public class Balali {
                             case 0:
                                 System.out.println("");
                             default:
-                                System.out.println("Operasi tidak valid. Silakan pilih kembali.");
+                                System.out.println("Inputan tidak valid. Silakan pilih kembali.");
                     }
                     if(choice == 0){
                         break;
@@ -173,7 +175,7 @@ public class Balali {
                                         hasil.tampilkanTransaksi();
                                         break;
                                     case 4:
-                                        System.out.println("============================= Daftar Buku ===============================\n");
+                                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Daftar Buku ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
                                             for(Buku value : adminn.daftarbuku){
                                                 System.out.println("Judul        : " + value.getJudul());
                                                 System.out.println("Pengarang    : "+value.getPengarang());
@@ -181,7 +183,7 @@ public class Balali {
                                                 System.out.println("Ketersediaan : "+value.isStatusKetersediaan());
                                                 System.out.println(" ");
                                             }
-                                            System.out.println("============================= Cari Buku ===============================\n");
+                                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cari Buku ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
                                             System.out.print("Masukan Judul Yang Ingin Dicari : ");
                                             String cari = scanner.nextLine();
                                             hasil.mencariKoleksiBuku(cari);

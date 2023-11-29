@@ -95,7 +95,7 @@ public class AnggotaPerpustakaan {
             System.out.println("Nama             : " + nama + "\nID               : " + nomorAnggota);
             System.out.println("Berhasil Mengembalikan Buku " + judul);
             System.out.println("Waktu Peminjaman : " + transaksi.getWaktuPeminjaman());
-            System.out.print("Durasi Peminjaman " + durasiPengembalian + " Hari");
+            System.out.print("Durasi Peminjaman " + durasiPengembalian + " Hari\n");
         } else {
             System.out.println("Tidak Ada Buku Yang Sesuai!");
         }

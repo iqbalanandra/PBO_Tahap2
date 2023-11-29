@@ -23,7 +23,7 @@ public class AnggotaPerpustakaan {
         this.historyPeminjaman = historyPeminjaman;
         this.transaksi = transaksi;
 
-        // Ensure admin is not null before invoking addAnggota
+        // Memastikan admin tidak 'null' saat addAnggota
         if (admin != null) {
             admin.addAnggota(this);
         } else {
@@ -53,7 +53,9 @@ public class AnggotaPerpustakaan {
         StringBuilder pinjam = new StringBuilder();
         boolean ditemukan = false;
 
-        System.out.println("\n=========================== Peminjaman Buku =============================");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("\n                  PEMINJAMAN BUKU                ");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         for (Buku value : admin.daftarbuku) {
             if (value.getJudul().equalsIgnoreCase(judul) && value.isStatusKetersediaan()) {
@@ -87,7 +89,9 @@ public class AnggotaPerpustakaan {
             }
         }
         if (berhasil) {
-            System.out.println("========================== Pengembalian Buku ============================");
+            System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println("\n                 PENGEMBALIAN BUKU               ");
+            System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println("Nama             : " + nama + "\nID               : " + nomorAnggota);
             System.out.println("Berhasil Mengembalikan Buku " + judul);
             System.out.println("Waktu Peminjaman : " + transaksi.getWaktuPeminjaman());
@@ -98,7 +102,9 @@ public class AnggotaPerpustakaan {
     }
 
     public void tampilkanTransaksi() {
-        System.out.println("=========================== Total Transaksi =============================");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("\n                  TOTAL TRANSAKSI                 ");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Total Transaksi " + nama);
         System.out.print("Buku Yang Di Pinjam : \n");
         for (TransaksiPengembalian value : daftarTransaksi) {
@@ -149,7 +155,7 @@ public class AnggotaPerpustakaan {
     }
 
     public void setTotalPinjaman(int totalPinjaman) {
-        // Jika dibutuhkan implementasi lebih lanjut
+        return totalPinjaman;
     }
 
     public String toString() {

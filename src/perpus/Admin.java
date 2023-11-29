@@ -45,7 +45,9 @@ public class Admin {
     //MENGELOLA BUKU
     public void addBuku(String judul, String pengarang, int nomorISBN, boolean statusKetersediaan){
         Buku daftar = new Buku(judul, pengarang, nomorISBN, statusKetersediaan);
-        System.out.println("============================== Notifikasi ===============================");
+        System.out.println("=============================================================");
+        System.out.println("                       !!! Notifikasi !!!                      ");
+        System.out.println("=============================================================");
         System.out.println("Buku Baru Telah Tersedia!");
         System.out.println("Judul     : " + judul);
         System.out.println("Pengarang : " + pengarang);
@@ -77,17 +79,19 @@ public class Admin {
             System.out.println("Alamat             : "+value.getAlamat());
             System.out.println("Riwayat Peminjaman : "+value.getHistoryPeminjaman());
         }
-        System.out.println("=========================================================================\n");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     }
     
     
     
     public void aktivitas(){
         for(Notifikasi value : aktivitas){
-            System.out.println("================================ Aktivitas ==============================\n");
+            System.out.println("=============================================================");
+            System.out.println("                            AKTIVITAS                          ");
+            System.out.println("=============================================================");
             System.out.println(value.getNama() + "\nMeminjam " + " " + value.getId());
             System.out.println("Pada " + value.getWaktu());
-            System.out.println("=========================================================================\n");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         }
     }
 }

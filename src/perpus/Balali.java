@@ -76,7 +76,7 @@ public class Balali {
                                 break;
 
                             case 2:
-                                System.out.print("Masukkan Nomor Anggota Yang Akan Dihapus : ");
+                                System.out.print("Masukkan Nama Anggota Yang Akan Dihapus : ");
                                 String namaAnggota = scanner.nextLine();
                                 adminn.removeAnggota(namaAnggota);
                                 break;

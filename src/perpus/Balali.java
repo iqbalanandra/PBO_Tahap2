@@ -8,7 +8,7 @@ public class Balali {
     public static void main(String[] args) {
         
         ArrayList<AnggotaPerpustakaan> daftarAnggota = new ArrayList<>();
-        Admin adminn = new Admin(1, "Urip");
+        Admin adminn = new Admin(1, "Administrator");
         TransaksiPeminjaman T1 = new TransaksiPeminjaman();
         TransaksiPeminjaman T2 = new TransaksiPeminjaman();
         TransaksiPeminjaman T3 = new TransaksiPeminjaman();
